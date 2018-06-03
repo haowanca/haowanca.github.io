@@ -1,16 +1,25 @@
 
 
 {% include particle_bg.html %}
+
+
+
+
 <div id="home">
-    
-    <iframe style="position: relative; top: 0; left: 0; width: 100%; height: 100%;" src="https://flickrembed.com/cms_embed.php?source=flickr&layout=responsive&input=72157696738062154&sort=0&by=album&theme=default_notextpanel&scale=fit&limit=20&skin=default&autoplay=true" scrolling="no" frameborder="0" allowFullScreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"><p><a  href="https://www.youtubevideoembed.com/add-youtube-videos-powerpoint/">https://www.youtubevideoembed.com/add-youtube-videos-powerpoint/</a></p><small>Powered by <a href="https://flickrembed.com">flickr embed</a>.</small></iframe><script type="text/javascript">function showpics(){var a=$("#box").val();$.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?tags="+a+"&tagmode=any&format=json&jsoncallback=?",function(a){$("#images").hide().html(a).fadeIn("fast"),$.each(a.items,function(a,e){$("<img/>").attr("src",e.media.m).appendTo("#images")})})}</script>
-
-
-
-    
-    
-    
-	
+    <script src="jquery.min.js"></script>
+    <script src="jssor.slider.min.js"></script>
+    <script>
+        jQuery(document).ready(function ($) {
+                               var options = { $AutoPlay: 1 };
+                               var jssor1_slider = new $JssorSlider$("jssor_1", options);
+                               });
+        </script>
+    <div id="jssor_1" style="position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+        <div data-u="slides" style="position:absolute;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
+            <div><img data-u="image" src="image1.jpg" /></div>
+            <div><img data-u="image" src="image2.jpg" /></div>
+        </div>
+    </div>
 </div>
 
 
