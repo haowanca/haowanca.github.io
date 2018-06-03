@@ -1,0 +1,103 @@
+
+#sponsors {
+	a {
+		text-decoration: none !important;
+	}
+}
+.sponsors {
+    padding: 50px 0;
+}
+
+.plat-sponsors {
+	margin-bottom: 50px;
+}
+
+.other-sponsors, .gold-sponsors  {
+	margin-bottom: 30px;
+}
+
+.sponsor-big {
+	width: 32%;
+	margin: 10px 20px;
+}
+
+.sponsor-big.p-spec-1 {
+	width: 31%;
+}
+
+.sponsor-gold {
+	width:28%;
+	margin: 10px 20px;
+}
+.sponsor-gold.g-spec-1 {
+	width: 13%;
+}
+
+.sponsor-silver {
+	width:23%;
+	margin: 10px 20px;
+}
+
+.sponsor-silver.s-spec-1 {
+	width: 25%;
+}
+.sponsor-silver.s-spec-2 {
+	width:19%;
+}
+
+.sponsor-bronze {
+	width: 19%;
+	margin: 10px 20px;
+}
+
+.sponsor-bronze.b-spec-1 {
+	width: 10%;
+}
+
+.partner {
+    width: 15%;
+    margin: 40px 5%;
+}
+
+.prev-sponsor{
+	width: 11%;
+    margin: 20px 2%;
+    min-width: 100px;
+}
+
+@media (max-width: 700px){
+	.sponsor-big {
+		width: 90%;
+		margin-bottom:40px;
+	}
+	
+	.sponsor-gold {
+		width:85%;
+	}
+	.sponsor-gold.g-spec-1 {
+		width:40%;
+	}
+	
+	.sponsor-silver {
+		width:75%;
+	}
+
+	.sponsor-silver.s-spec-1 {
+		width:45%;
+	}
+	.sponsor-silver.s-spec-2 {
+		width:48%;
+	}
+
+	.sponsor-bronze {
+		width: 44%;
+	}
+
+	.sponsor-bronze.b-spec-1 {
+		width: 37%;
+	}
+	
+	.partner {
+	    width: 40%;
+	}
+}
