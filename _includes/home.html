@@ -6,204 +6,137 @@
 
 
 <div id="home">
-    
-    
-    
-    <!-- Container for the image gallery -->
-    <div class="container">
-        
-        <!-- Full-width images with number text -->
-        <div class="mySlides">
-            <div class="numbertext">1 / 6</div>
-            <img src="{{site.baseurl}}/assets/images/ottawa/image1.jpg" style="width:100%">
-                </div>
-        
-        <div class="mySlides">
-            <div class="numbertext">2 / 6</div>
-            <img src="{{site.baseurl}}/assets/images/ottawa/image1.jpg" style="width:100%">
-                </div>
-        
-        <div class="mySlides">
-            <div class="numbertext">3 / 6</div>
-            <img src="img_mountains_wide.jpg" style="width:100%">
-                </div>
-        
-        <div class="mySlides">
-            <div class="numbertext">4 / 6</div>
-            <img src="img_lights_wide.jpg" style="width:100%">
-                </div>
-        
-        <div class="mySlides">
-            <div class="numbertext">5 / 6</div>
-            <img src="img_nature_wide.jpg" style="width:100%">
-                </div>
-        
-        <div class="mySlides">
-            <div class="numbertext">6 / 6</div>
-            <img src="img_snow_wide.jpg" style="width:100%">
-                </div>
-        
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        
-        <!-- Image text -->
-        <div class="caption-container">
-            <p id="caption"></p>
-        </div>
-        
-        <!-- Thumbnail images -->
-        <div class="row">
-            <div class="column">
-                <img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-                    </div>
-            <div class="column">
-                <img class="demo cursor" src="img_fjords.jpg" style="width:100%" onclick="currentSlide(2)" alt="Trolltunga, Norway">
-                    </div>
-            <div class="column">
-                <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-                    </div>
-            <div class="column">
-                <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-                    </div>
-            <div class="column">
-                <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-                    </div>
-            <div class="column">
-                <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-                    </div>
-        </div>
-    </div>
-    
-    
-    
-    
-   <style>
-       
-       * {
-           box-sizing: border-box;
-       }
-   
-   /* Position the image container (needed to position the left and right arrows) */
-   .container {
-       position: relative;
-   }
-   
-   /* Hide the images by default */
-   .mySlides {
-       display: none;
-   }
-   
-   /* Add a pointer when hovering over the thumbnail images */
-   .cursor {
-       cursor: pointer;
-   }
-   
-   /* Next & previous buttons */
-   .prev,
-   .next {
-       cursor: pointer;
-       position: absolute;
-       top: 40%;
-       width: auto;
-       padding: 16px;
-       margin-top: -50px;
-       color: white;
-       font-weight: bold;
-       font-size: 20px;
-       border-radius: 0 3px 3px 0;
-       user-select: none;
-       -webkit-user-select: none;
-   }
-   
-   /* Position the "next button" to the right */
-   .next {
-       right: 0;
-       border-radius: 3px 0 0 3px;
-   }
-   
-   /* On hover, add a black background color with a little bit see-through */
-   .prev:hover,
-   .next:hover {
-       background-color: rgba(0, 0, 0, 0.8);
-   }
-   
-   /* Number text (1/3 etc) */
-   .numbertext {
-       color: #f2f2f2;
-       font-size: 12px;
-       padding: 8px 12px;
-       position: absolute;
-       top: 0;
-   }
-   
-   /* Container for image text */
-   .caption-container {
-       text-align: center;
-       background-color: #222;
-       padding: 2px 16px;
-       color: white;
-   }
-   
-   .row:after {
-       content: "";
-       display: table;
-       clear: both;
-   }
-   
-   /* Six columns side by side */
-   .column {
-       float: left;
-       width: 16.66%;
-   }
-   
-   /* Add a transparency effect for thumnbail images */
-   .demo {
-       opacity: 0.6;
-   }
-   
-   .active,
-   .demo:hover {
-       opacity: 1;
-   }
-       
-       
-       
-       
-       
-       
-    </style>
-    
-    <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
+    <link rel='stylesheet' id='camera-css'  href='../css/camera.css' type='text/css' media='all'>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+            }
+        a {
+            color: #09f;
         }
-    
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("demo");
-        var captionText = document.getElementById("caption");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
+        a:hover {
+            text-decoration: none;
         }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
+        #back_to_camera {
+            clear: both;
+            display: block;
+            height: 80px;
+            line-height: 40px;
+            padding: 20px;
         }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-        captionText.innerHTML = dots[slideIndex-1].alt;
-    }
-    </script>
+        .fluid_container {
+            margin: 0 auto;
+            max-width: 1000px;
+            width: 90%;
+        }
+        </style>
+        
+        <!--///////////////////////////////////////////////////////////////////////////////////////////////////
+         //
+         //        Scripts
+         //
+         ///////////////////////////////////////////////////////////////////////////////////////////////////-->
+        
+        <script type='text/javascript' src='../scripts/jquery.min.js'></script>
+        <script type='text/javascript' src='../scripts/jquery.mobile.customized.min.js'></script>
+        <script type='text/javascript' src='../scripts/jquery.easing.1.3.js'></script>
+        <script type='text/javascript' src='../scripts/camera.min.js'></script>
+        
+        <script>
+            jQuery(function(){
+                   
+                   jQuery('#camera_wrap_1').camera({
+                                                   thumbnails: true
+                                                   });
+                   jQuery('#camera_wrap_2').camera({
+                                                   height: '400px',
+                                                   loader: 'bar',
+                                                   pagination: false,
+                                                   thumbnails: true
+                                                   });
+                   });
+            </script>
+        
+        </head>
+        <body>
+            <div id="back_to_camera">
+                <a href="http://www.pixedelic.com/plugins/camera/">&larr; Back to the Camera project</a>
+            </div><!-- #back_to_camera -->
+            
+            <div class="fluid_container">
+                <p>Pagination circles with the height relative to the width</p>
+                <div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
+                    <div data-thumb="../images/slides/thumbs/bridge.jpg" data-src="../images/slides/bridge.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            Camera is a responsive/adaptive slideshow. <em>Try to resize the browser window</em>
+                        </div>
+                    </div>
+                    <div data-thumb="../images/slides/thumbs/leaf.jpg" data-src="../images/slides/leaf.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            It uses a light version of jQuery mobile, <em>navigate the slides by swiping with your fingers</em>
+                        </div>
+                    </div>
+                    <div data-thumb="../images/slides/thumbs/road.jpg" data-src="../images/slides/road.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            <em>It's completely free</em> (even if a donation is appreciated)
+                        </div>
+                    </div>
+                    <div data-thumb="../images/slides/thumbs/sea.jpg" data-src="../images/slides/sea.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            Camera slideshow provides many options <em>to customize your project</em> as more as possible
+                        </div>
+                    </div>
+                    <div data-thumb="../images/slides/thumbs/shelter.jpg" data-src="../images/slides/shelter.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            It supports captions, HTML elements and videos and <em>it's validated in HTML5</em> (<a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.pixedelic.com%2Fplugins%2Fcamera%2F&amp;charset=%28detect+automatically%29&amp;doctype=Inline&amp;group=0&amp;user-agent=W3C_Validator%2F1.2" target="_blank">have a look</a>)
+                        </div>
+                    </div>
+                    <div data-thumb="../images/slides/thumbs/tree.jpg" data-src="../images/slides/tree.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            Different color skins and layouts available, <em>fullscreen ready too</em>
+                        </div>
+                    </div>
+                </div><!-- #camera_wrap_1 -->
+                
+                <p>Thumbnails with fixed height</p>
+                <div class="camera_wrap camera_magenta_skin" id="camera_wrap_2">
+                    <div data-thumb="../images/slides/thumbs/bridge.jpg" data-src="../images/slides/bridge.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            Camera is a responsive/adaptive slideshow. <em>Try to resize the browser window</em>
+                        </div>
+                    </div>
+                    <div data-thumb="../images/slides/thumbs/leaf.jpg" data-src="../images/slides/leaf.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            It uses a light version of jQuery mobile, <em>navigate the slides by swiping with your fingers</em>
+                        </div>
+                    </div>
+                    <div data-thumb="../images/slides/thumbs/road.jpg" data-src="../images/slides/road.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            <em>It's completely free</em> (even if a donation is appreciated)
+                        </div>
+                    </div>
+                    <div data-thumb="../images/slides/thumbs/sea.jpg" data-src="../images/slides/sea.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            Camera slideshow provides many options <em>to customize your project</em> as more as possible
+                        </div>
+                    </div>
+                    <div data-thumb="../images/slides/thumbs/shelter.jpg" data-src="../images/slides/shelter.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            It supports captions, HTML elements and videos and <em>it's validated in HTML5</em> (<a href="http://validator.w3.org/check?uri=http%3A%2F%2Fwww.pixedelic.com%2Fplugins%2Fcamera%2F&amp;charset=%28detect+automatically%29&amp;doctype=Inline&amp;group=0&amp;user-agent=W3C_Validator%2F1.2" target="_blank">have a look</a>)
+                        </div>
+                    </div>
+                    <div data-thumb="../images/slides/thumbs/tree.jpg" data-src="../images/slides/tree.jpg">
+                        <div class="camera_caption fadeFromBottom">
+                            Different color skins and layouts available, <em>fullscreen ready too</em>
+                        </div>
+                    </div>
+                </div><!-- #camera_wrap_2 -->
+            </div><!-- .fluid_container -->
+            
+            <div style="clear:both; display:block; height:100px"></div>
+    
+    
     
 
 </div>
