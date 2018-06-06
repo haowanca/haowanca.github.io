@@ -3,7 +3,7 @@
 <h2 class="contact-title">
     订阅好玩的活动
 </h2><hr>
-<p class="contact-subtitle">订阅后您会收到最新活动提醒，也可随时取消订阅</p>
+<p class="contact-subtitle">订阅后您能收到最新活动提醒，可随时取消</p>
 
 <form id="contact-form" method="POST" class="contact-form">
     <!--input type="text" name="name">
@@ -23,7 +23,7 @@
     $contactForm.submit(function(e) {
         e.preventDefault();
         $.ajax({
-            url: "//formspree.io/info@cuhacking.com",
+            url: "//formspree.io/haowan.ca@gmail.com",
             method: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
