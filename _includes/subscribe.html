@@ -7,15 +7,26 @@
 
 <form id="contact-form" method="POST" class="contact-form">
     <!--input type="text" name="name">
-    <input type="email" name="_replyto"-->
+     <input type="email" name="_replyto"-->
     <div class="form-group">
-        
+        <div class="input-group">
+            <span class="input-group-addon">Name</span>
+            <input name="name" type="text" placeholder="name" class="form-control" required>
+                </div>
         <div class="input-group">
             <span class="input-group-addon">Email</span>
-            <input name="email" type="email" placeholder="请输入邮箱地址" class="form-control" required>
+            <input name="email" type="email" placeholder="email" class="form-control" required>
+                </div>
+        <div class="input-group">
+            <span class="input-group-addon">Subject</span>
+            <input name="subject" placeholder="subject" type="text" name="subject" class="form-control" required>
+                </div>
+        <div class="input-group">
+            <span class="input-group-addon">Description</span>
+            <textarea name="description" name="description" placeholder="Your message..." class="form-control" rows="4" cols="60" required></textarea>
         </div>
-        <input id="contact-button" type="submit" value="提交">
-    </div>
+        <input id="contact-button" type="submit" value="Send">
+            </div>
 </form>
 
 <script>
@@ -24,7 +35,6 @@
         e.preventDefault();
         $.ajax({
             url:"https://formspree.io/haowan.ca@gmail.com",
-               
             method: 'POST',
             data: $(this).serialize(),
             dataType: 'json',
