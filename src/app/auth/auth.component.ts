@@ -18,15 +18,12 @@ export class AuthComponent implements OnInit {
   login() {
 
     this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
-    console.log("Hello1"); //1. This works perfectly
-    console.log(JSON.stringify(this.afAuth.user.displayName)); //1. This works perfectly
+
 
   }
   logout() {
     this.afAuth.auth.signOut();
-    console.log("Hello2"); //1. This works perfectly
-
-    console.log(JSON.stringify(this.afAuth.user.displayName)); //1. This works perfectly
+    
 
   }
 
